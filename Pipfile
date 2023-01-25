@@ -16,6 +16,10 @@ flask-mail = "*"
 pyjwt = "*"
 flask-bootstrap = "*"
 flask-moment = "*"
+flask-babel = "*"
+click = "*"
+langdetect = "*"
+requests = "*"
 
 [dev-packages]
 

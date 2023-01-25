@@ -1,0 +1,16 @@
+<table class="responsive-table highlight">
+    <tr valign="top" halign="left">
+        <td width="80px" style="padding: 0px; margin-top: 0px; margin-bottom: 0px;">
+            <a href="{{ url_for('user', username=post.author.username) }}">
+                <img src="{{ post.author.avatar(36) }}" />
+                <br/>
+                {{ post.author.username | title }}
+            </a>
+        </td>
+        <td>
+            <textarea readonly class="materialize-textarea" style="padding: 0px; margin-top: 0px; margin-bottom: 0px;">{{ post.body }}</textarea>
+            <p align="right" margin="0px" style="padding: 0px; margin-top: 0px; margin-bottom: 0px;">{{ post.timestamp }}</p>
+            <p align="right"> {{ moment(post.timestamp).fromNow() }}</p>
+        </td>
+    </tr>
+</table>
